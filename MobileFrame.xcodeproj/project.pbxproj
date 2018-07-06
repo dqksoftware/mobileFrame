@@ -15,6 +15,7 @@
 		2968B33120EF173A005E5634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2968B33020EF173A005E5634 /* main.m */; };
 		2968B33B20EF173A005E5634 /* MobileFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2968B33A20EF173A005E5634 /* MobileFrameTests.m */; };
 		2968B34620EF173A005E5634 /* MobileFrameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2968B34520EF173A005E5634 /* MobileFrameUITests.m */; };
+		9DE23A0C2091FD3CDFFDBC17 /* libPods-MobileFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ABDBFAE9907A641E13A1C2D /* libPods-MobileFrame.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		2968B34120EF173A005E5634 /* MobileFrameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileFrameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2968B34520EF173A005E5634 /* MobileFrameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileFrameUITests.m; sourceTree = "<group>"; };
 		2968B34720EF173B005E5634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0BBC11DE52BEF5E3A33921 /* Pods-MobileFrame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileFrame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileFrame/Pods-MobileFrame.debug.xcconfig"; sourceTree = "<group>"; };
+		2CD19E0755667A47ED0F212E /* Pods-MobileFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileFrame/Pods-MobileFrame.release.xcconfig"; sourceTree = "<group>"; };
+		5ABDBFAE9907A641E13A1C2D /* libPods-MobileFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobileFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE23A0C2091FD3CDFFDBC17 /* libPods-MobileFrame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				2968B33920EF173A005E5634 /* MobileFrameTests */,
 				2968B34420EF173A005E5634 /* MobileFrameUITests */,
 				2968B31F20EF1738005E5634 /* Products */,
+				DC94F967831B4ED5C4C86D9F /* Pods */,
+				95DA96A1240EEFA6857ED294 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = MobileFrameUITests;
 			sourceTree = "<group>";
 		};
+		95DA96A1240EEFA6857ED294 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDBFAE9907A641E13A1C2D /* libPods-MobileFrame.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC94F967831B4ED5C4C86D9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BBC11DE52BEF5E3A33921 /* Pods-MobileFrame.debug.xcconfig */,
+				2CD19E0755667A47ED0F212E /* Pods-MobileFrame.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2968B34A20EF173B005E5634 /* Build configuration list for PBXNativeTarget "MobileFrame" */;
 			buildPhases = (
+				C8F31BC1A8580E0E7EDC08B5 /* [CP] Check Pods Manifest.lock */,
 				2968B31A20EF1738005E5634 /* Sources */,
 				2968B31B20EF1738005E5634 /* Frameworks */,
 				2968B31C20EF1738005E5634 /* Resources */,
@@ -256,6 +281,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C8F31BC1A8580E0E7EDC08B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileFrame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2968B31A20EF1738005E5634 /* Sources */ = {
@@ -431,14 +477,12 @@
 		};
 		2968B34B20EF173B005E5634 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0BBC11DE52BEF5E3A33921 /* Pods-MobileFrame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileFrame/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqk.test.MobileFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,14 +491,12 @@
 		};
 		2968B34C20EF173B005E5634 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD19E0755667A47ED0F212E /* Pods-MobileFrame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileFrame/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqk.test.MobileFrame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,11 +509,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileFrameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqk.test.MobileFrameTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,11 +523,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileFrameTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqk.test.MobileFrameTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,11 +536,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileFrameUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqk.test.MobileFrameUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,11 +549,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileFrameUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dqk.test.MobileFrameUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

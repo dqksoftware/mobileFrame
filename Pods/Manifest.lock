@@ -1,0 +1,16 @@
+PODS:
+  - PrivateLib (0.0.1)
+
+DEPENDENCIES:
+  - PrivateLib (from `../PrivateLib`)
+
+EXTERNAL SOURCES:
+  PrivateLib:
+    :path: "../PrivateLib"
+
+SPEC CHECKSUMS:
+  PrivateLib: 26b8d4f70c206caa0589e51b832e45dbcf4a98cc
+
+PODFILE CHECKSUM: f501f65a89ac6bb5108e919c1028bc3e10be34ef
+
+COCOAPODS: 1.5.0
