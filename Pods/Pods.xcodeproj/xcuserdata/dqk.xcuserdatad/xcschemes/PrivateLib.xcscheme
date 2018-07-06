@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E97D10ADC45CC9E91A171E8B42549CFC"
-               BlueprintName = "Pods-MobileFrame"
+               BlueprintIdentifier = "B51D18DC2C46C40E7D0BF9D942B1F75D"
+               BlueprintName = "PrivateLib"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-MobileFrame.a">
+               BuildableName = "libPrivateLib.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
